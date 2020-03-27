@@ -42,6 +42,7 @@ class FE_body extends Component {
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">
 	        		{this.makeExampleCard()}
