@@ -3,7 +3,7 @@
 }
 #FrontEnd *:hover {
 	/*debug*/
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -63,5 +63,25 @@
 	cursor: pointer;
 	background-color: #18A0FB;
 	color: #FFFFFF;
+}
+
+
+
+
+/*body*/
+.FE_body {
+	padding: 20px 10px;
+	min-height: 100vh;
+
+}
+
+.FE_body .column {
+	display: inline-grid;
+	width: 20%;
+	padding: 10px;	
+}
+
+.FE_body .column div {
+	width: 100%;
 }
 

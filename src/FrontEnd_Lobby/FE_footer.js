@@ -10,7 +10,7 @@ class FE_footer extends Component {
 	render() {
 	    return(
 	        <div class="FE_footer">
-
+	        	
 	        </div>
 	    );
 	}
