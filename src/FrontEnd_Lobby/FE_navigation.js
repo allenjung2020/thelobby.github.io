@@ -12,7 +12,7 @@ class FE_navigation extends Component {
 	        <div class="FE_navigation">
 	        	<div class="left both">
 	        		<span>{"Hello " + this.props.name}</span>
-
+	            	<a class="FE_navigation_button">About</a>
 	        	</div>
 	            <div class="right both">
 	            	<button class="FE_navigation_button">Log in</button>

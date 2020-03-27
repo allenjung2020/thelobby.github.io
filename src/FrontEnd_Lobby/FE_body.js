@@ -22,7 +22,8 @@ class FE_body extends Component {
 		for (let i = 0; i < length; i++) {
 			description += this.generateRandomStr(Math.floor(Math.random()*7 + 3)) + " ";
 		}
-    	return <Card subject={r} description={description}/>
+
+    	return <Card subject={r} description={description} number={Math.floor(Math.random()*10)}/>
     }
 
     generateRandomStr(length) {

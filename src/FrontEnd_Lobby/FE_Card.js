@@ -19,6 +19,8 @@ class FE_Card extends Component {
 	        <div class="FE_Card">
 	        	<h1>{this.props.subject}</h1>
 	        	<p>{this.props.description}</p>
+	        	<p>{this.props.number + " in line"}</p>
+	        	<button>Join Queue</button>
 	        </div>
 	    );
 	}
