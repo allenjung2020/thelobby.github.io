@@ -9,13 +9,23 @@ class FrontEnd extends Component {
     
     constructor(props) {
     	super(props);
+    	this.state = {
+    		UserName: "John Doe",
+    		Email: "email@email.com"
+    	}
+    }
+
+    setUserName = (name) => {
+    	this.setState({
+    		UserName: name
+    	});
     }
 
 	render() {
 	    return(
 	        <div id="FrontEnd">
 	            Front End Yah Bro!
-	            <FE_navigation/>
+	            <FE_navigation setName={this.setUserName} name={this.state.UserName}/>
 	            <FE_body/>
 	            <FE_footer/>
 	        </div>

@@ -11,7 +11,8 @@ class FE_navigation extends Component {
 	    return(
 	        <div class="FE_navigation">
 	        	<div class="left both">
-	        		<span>The Lobby</span>
+	        		<span>{"Hello " + this.props.name}</span>
+
 	        	</div>
 	            <div class="right both">
 	            	<button class="FE_navigation_button">Log in</button>

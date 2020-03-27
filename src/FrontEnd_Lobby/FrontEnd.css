@@ -30,11 +30,11 @@
 	vertical-align: middle;
 }
 .FE_navigation .left {
-	font-size: 2em;
 	text-align: left;
 }
 
 .FE_navigation .left span {
+	font-size: 2em;
 	margin-left: 2em;
 }
 

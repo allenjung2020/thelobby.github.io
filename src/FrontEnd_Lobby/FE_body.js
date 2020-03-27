@@ -10,7 +10,7 @@ class FE_body extends Component {
 	render() {
 	    return(
 	        <div class="FE_body">
-
+	        	
 	        </div>
 	    );
 	}
