@@ -1,8 +1,11 @@
+/*all css styles for frontend view in one file?*/
+
+
 #FrontEnd * {
 	box-sizing: border-box;
 }
+/*debug feature*/
 #FrontEnd *:hover {
-	/*debug*/
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -84,5 +87,8 @@
 
 .FE_body .column .Card {
 	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
 }
 

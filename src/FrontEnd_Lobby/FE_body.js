@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 
 import Card from './Card'; 
 
+
+// contains the main content of the lobby
+// a list of strings from backend ?
+// then pass this list to the individual "Card" 
+
+
+
 class FE_body extends Component {
     
     constructor(props) {

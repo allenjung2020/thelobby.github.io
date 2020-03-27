@@ -5,6 +5,13 @@ import FE_navigation from './FE_navigation';
 import FE_body from './FE_body';
 import FE_footer from './FE_footer';
 
+
+// manages the layout of the frontend view
+// Uses:
+//	FE_navigation
+//	FE_body
+//	FE_footer
+
 class FrontEnd extends Component {
     
     constructor(props) {
