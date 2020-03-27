@@ -1,11 +1,18 @@
-import React from "react";
+import React, {Component} from 'react';
 
-function FrontEnd() {
-    return(
-        <div>
-            Front End Yah Bro!
-        </div>
-    );
+class FrontEnd extends Component {
+    
+    constructor(props) {
+    	super(props);
+    }
+
+	render() {
+	    return(
+	        <div>
+	            Front End Yah Bro!
+	        </div>
+	    );
+	}
 }
 
 export default FrontEnd;
