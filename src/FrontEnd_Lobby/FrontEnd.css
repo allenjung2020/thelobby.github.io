@@ -70,6 +70,7 @@
 
 /*body*/
 .FE_body {
+	background-color: #E5E5E5;
 	padding: 20px 10px;
 	min-height: 100vh;
 
@@ -81,7 +82,7 @@
 	padding: 10px;	
 }
 
-.FE_body .column div {
+.FE_body .column .Card {
 	width: 100%;
 }
 

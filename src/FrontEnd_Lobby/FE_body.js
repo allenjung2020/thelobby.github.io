@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import Card from './Card'; 
 
 class FE_body extends Component {
     
@@ -7,47 +8,30 @@ class FE_body extends Component {
     	super(props);
     }
 
+    makeExampleCard() {
+    	return <Card subject="Physics" description="Contains the avaliable physics classes"/>
+    }
+
 	render() {
 	    return(
 	        <div class="FE_body">
 	        	<div class="column">
-	        		<div>
-	        			Some example content
-	        			/* Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. */
-	        		</div>
-	        		<div><button>button</button></div>
-					<div>
-	        			Some example content
-	        			/* Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. */
-	        		</div>
-	        		<div><button>button</button></div>
+	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">
-	        		<div>
-	        			Some example content
-	        			/* Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. */
-	        			/* Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. */
-
-	        		</div>
-	        		<div><button>button</button></div>
+	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">
-	        		<div>
-	        			Some example content
-	        		</div>
-	        		<div><button>button</button></div>
+	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">
-	        		<div>
-	        			Some example content
-	        		</div>
-	        		<div><button>button</button></div>
+	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">
-	        		<div>
-	        			Some example content
-	        		</div>
-	        		<div><button>button</button></div>
+	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
 	        	</div>
 	        </div>
 	    );
