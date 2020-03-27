@@ -10,9 +10,12 @@ class FE_navigation extends Component {
 	render() {
 	    return(
 	        <div class="FE_navigation">
-	            <div class="login">
-	            	<div>Log in</div>
-	            	<div>Register</div>
+	        	<div class="left both">
+	        		<span>The Lobby</span>
+	        	</div>
+	            <div class="right both">
+	            	<button class="FE_navigation_button">Log in</button>
+	            	<button class="FE_navigation_button">Register</button>
 	            </div>
 	        </div>
 	    );
