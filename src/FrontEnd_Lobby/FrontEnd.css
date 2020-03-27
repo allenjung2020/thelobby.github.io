@@ -1,3 +1,46 @@
-#FrontEnd {
-	background-color: red;
+#FrontEnd * {
+	box-sizing: border-box;
+
+}
+
+
+#FrontEnd *:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.FE_navigation {
+	background-color: green;
+	
+
+}
+
+
+
+.FE_navigation .login {
+	float: right;
+	background-color: #FFFFFF;
+	text-align: right;
+	display: inline-block;
+	
+}
+
+
+.FE_navigation .login div {
+	border: 2px solid #18A0FB;
+	border-radius: 6px;
+	display: inline-block;
+	width: 8em;
+	line-height: 2.5em;
+	margin: 0 1em;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.FE_navigation .login div:nth-child(2) {
+	background-color: #18A0FB;
+	color: #FFFFFF;
+}
+.FE_navigation .login div:nth-child(1) {
+	background-color: #FFFFFF;
+	color: #18A0FB;
 }
