@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Card from './Card'; 
+import Card from './FE_Card'; 
 
 
 // contains the main content of the lobby
@@ -16,7 +16,21 @@ class FE_body extends Component {
     }
 
     makeExampleCard() {
-    	return <Card subject="Physics" description="Contains the avaliable physics classes"/>
+    	let r = this.generateRandomStr(7);
+		let length = Math.random() * 40 + 20;
+		let description = "";
+		for (let i = 0; i < length; i++) {
+			description += this.generateRandomStr(Math.floor(Math.random()*7 + 3)) + " ";
+		}
+    	return <Card subject={r} description={description}/>
+    }
+
+    generateRandomStr(length) {
+    	let result = "";
+    	for (let i = 0; i < length; i++) {
+    		result += String.fromCharCode(Math.floor(Math.random()*26+97));
+    	}
+    	return result;
     }
 
 	render() {
@@ -24,11 +38,17 @@ class FE_body extends Component {
 	        <div class="FE_body">
 	        	<div class="column">
 	        		{this.makeExampleCard()}
-	        	</div>
-	        	<div class="column">
+	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">
+	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
+	        		{this.makeExampleCard()}
+	        	</div>
+	        	<div class="column">
+	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
 	        	<div class="column">

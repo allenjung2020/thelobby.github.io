@@ -8,7 +8,7 @@ import React, {Component} from 'react';
 //	description
 		
 
-class Card extends Component {
+class FE_Card extends Component {
     
     constructor(props) {
     	super(props);
@@ -16,7 +16,7 @@ class Card extends Component {
 
 	render() {
 	    return(
-	        <div class="Card">
+	        <div class="FE_Card">
 	        	<h1>{this.props.subject}</h1>
 	        	<p>{this.props.description}</p>
 	        </div>
@@ -24,4 +24,4 @@ class Card extends Component {
 	}
 }
 
-export default Card;
+export default FE_Card;
