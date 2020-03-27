@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 }
 #FrontEnd *:hover {
+	/*debug*/
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -12,12 +13,13 @@
 
 
 .FE_navigation_button {
+	font-size: 1.1em;
 	border: 2px solid #18A0FB;
 	border-radius: 6px;
 	width: 8em;
-	line-height: 2.5em;
+	line-height: 2em;
 	margin-right: 0.8em;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 	text-align: center;
 }
 
@@ -25,9 +27,9 @@
 .FE_navigation .both {
 	width: 50%;
 	display: inline-block;
+	vertical-align: middle;
 }
 .FE_navigation .left {
-	vertical-align: middle;
 	font-size: 2em;
 	text-align: left;
 }
@@ -40,13 +42,26 @@
 .FE_navigation .right {
 	text-align: right;
 }
+.FE_navigation .right button {
+	transition: all 0.3s;
+}
 
 .FE_navigation .right button:nth-child(2) {
 	background-color: #18A0FB;
 	color: #FFFFFF;
 }
+.FE_navigation .right button:nth-child(2):hover {
+	cursor: pointer;
+	background-color: #FFFFFF;
+	color: #18A0FB;
+}
 .FE_navigation .right button:nth-child(1) {
 	background-color: #FFFFFF;
 	color: #18A0FB;
+}
+.FE_navigation .right button:nth-child(1):hover {
+	cursor: pointer;
+	background-color: #18A0FB;
+	color: #FFFFFF;
 }
 
