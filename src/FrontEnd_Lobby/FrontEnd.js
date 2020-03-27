@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./FrontEnd.css";
 
 class FrontEnd extends Component {
     
@@ -8,7 +9,7 @@ class FrontEnd extends Component {
 
 	render() {
 	    return(
-	        <div>
+	        <div id="FrontEnd">
 	            Front End Yah Bro!
 	        </div>
 	    );
