@@ -1,0 +1,11 @@
+.Navigation {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    display: inline-block;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    /*margin-left: 25%;*/
+    /*margin-right: 25%;*/
+    /*justify-content: center;*/
+}
