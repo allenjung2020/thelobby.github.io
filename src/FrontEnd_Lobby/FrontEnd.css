@@ -6,7 +6,7 @@
 }
 /*debug feature*/
 #FrontEnd *:hover {
-	background-color: rgba(0, 0, 0, 0.15);
+	/*background-color: rgba(0, 0, 0, 0.15);*/
 }
 
 
@@ -111,17 +111,22 @@
 	border-radius: 4px;
 	background-color: #FFFFFF;
 	padding: 5px;
-	overflow: hidden;
-	transition: all 0.5s;
 }
-.hide {
-	max-height: calc(0.2*100vw * 1.4);
-}
-.show {
-	max-height: 100%;
-}
-
-
 .FE_Card img {
 	width: 100%;
 }
+/*animate the height of paragraph*/
+.FE_Card p {
+	transition: all 0.5s;
+	overflow: hidden;
+}
+.hide {
+	border-bottom: 1px solid black;
+	max-height: 4em;
+}
+.show {
+	border-bottom: 1px solid white;
+	max-height: 22em;
+}
+
+
