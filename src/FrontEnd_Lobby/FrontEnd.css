@@ -1,6 +1,9 @@
 /*all css styles for frontend view in one file?*/
 
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+
 #FrontEnd * {
 	box-sizing: border-box;
 }
@@ -93,7 +96,7 @@
 /*********************body************************/
 
 .FE_body {
-	background-color: #E5E5E5;
+	background-color: /*#E5E5E5;*/ #f5f5f5;
 	padding: 20px;
 	min-height: 100vh;
 
@@ -108,13 +111,23 @@
 .FE_Card {
 	width: 100%;
 	margin-bottom: 20px;
-	border-radius: 4px;
+	/*order-radius: 4px;*/
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
 	background-color: #FFFFFF;
 	padding: 5px;
 }
 .FE_Card img {
 	width: 100%;
 }
+
+.FE_Card h1 {
+	font-size: 1.35em;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #555555;
+}
+
 /*animate the height of paragraph*/
 .FE_Card p {
 	transition: all 0.5s;
