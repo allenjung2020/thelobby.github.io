@@ -32,12 +32,13 @@ class FE_Card extends Component {
 	render() {
 	    return(
 	        <div className={"FE_Card "}>
-	        	<div style={{color: "transparent"}}>_</div>
 	        	<img src={ require("" + this.props.img)} alt="company profile" />
 	        	<h1>{this.props.subject}</h1>
 	        	<p  onClick={e => this.clickedToShow()} className={this.state.class}>{this.props.description}</p>
-	        	<span>{this.props.number + " in line "}</span>
-	        	<button>Join Queue</button>
+	        	<div className={"container"}>
+					<span>{this.props.number + " in line "}</span>
+					<button>Join Queue</button>
+	        	</div>
 	        </div>
 	    );
 	}
