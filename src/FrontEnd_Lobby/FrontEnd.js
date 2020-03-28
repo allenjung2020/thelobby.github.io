@@ -28,6 +28,7 @@ class FrontEnd extends Component {
     	});
     }
 
+    // maybe a bad idea to make FE_navigation change the name 
 	render() {
 	    return(
 	        <div id="FrontEnd">

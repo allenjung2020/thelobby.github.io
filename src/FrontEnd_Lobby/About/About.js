@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import NavBar from "../FE_navigation"; 
-
+import "./About.css";
 
 // the about page
 
@@ -15,7 +15,7 @@ class About extends Component {
 	render() {
 	    return(
 	        <div className="About">
-	    		<NavBar/>
+	    		<NavBar name="this.props.what?"/>
 	        	<p>This is the about page</p>
 	        </div>
 	    );
