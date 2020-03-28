@@ -40,21 +40,23 @@ class FE_body extends Component {
 	render() {
 	    return(
 	        <div className="FE_body">
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
-	        		{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
 	        </div>
 	    );
 	}
