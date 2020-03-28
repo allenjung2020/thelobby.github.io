@@ -6,10 +6,12 @@ class FE_footer extends Component {
     constructor(props) {
     	super(props);
     	this.state = {
-    		textareaClassName: "hideInput"
+    		textareaClassName: "hideInput",
+    		feedback: ""
     	};
     }
 
+    // toogle the textarea
     showHideInput = () => {
     	if (this.state.textareaClassName === "hideInput") {
     		this.setState({textareaClassName: "showInput"});
@@ -18,15 +20,25 @@ class FE_footer extends Component {
     	}
     }
 
+    sendFeeback = () => {
+    	// send str somehow
+    	this.setState({
+    		feedback: "thank you"
+    	});
+    }
+
 	render() {
 	    return(
 	        <div className="FE_footer">
-	        	Footer
+	        	<div>
+	        		Footer
+	        	</div>
 	        	<div className="feedback">
 	        		<p onClick={e => this.showHideInput()}>Bugs? Feedbacks? Suggestions? Tell us here</p>
-	        		<div className="inputDiv">
-	        			<textarea className={this.state.textareaClassName} />
-	        			<button>Send</button>
+	        		<div className={"inputDiv " + this.state.textareaClassName}>
+	        			<textarea value={this.state.feedback} placeholder="type here" 
+	        				onChange={e => this.setState({feedback: e.target.value})}/>
+	        			<button onClick={e => this.sendFeeback()}>Send</button>
 	        		</div>
 	        	</div>
 	        </div>
