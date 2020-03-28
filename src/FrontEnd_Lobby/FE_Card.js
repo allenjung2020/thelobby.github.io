@@ -6,6 +6,8 @@ import React, {Component} from 'react';
 // uses: this.props.
 //	subject
 //	description
+//	number
+//	img
 		
 
 class FE_Card extends Component {
@@ -16,7 +18,9 @@ class FE_Card extends Component {
 
 	render() {
 	    return(
-	        <div class="FE_Card">
+	        <div className="FE_Card">
+	        	{console.log()}
+	        	<img src={ require("" + this.props.img)} alt="company profile image" />
 	        	<h1>{this.props.subject}</h1>
 	        	<p>{this.props.description}</p>
 	        	<p>{this.props.number + " in line"}</p>

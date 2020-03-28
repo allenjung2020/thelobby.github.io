@@ -23,7 +23,8 @@ class FE_body extends Component {
 			description += this.generateRandomStr(Math.floor(Math.random()*7 + 3)) + " ";
 		}
 
-    	return <Card subject={r} description={description} number={Math.floor(Math.random()*10)}/>
+    	return <Card subject={r} description={description} 
+    	number={Math.floor(Math.random()*10)} img={"./imgSample/company" + Math.floor(Math.random()*10+1) + ".png"}/>
     }
 
     generateRandomStr(length) {
@@ -34,31 +35,33 @@ class FE_body extends Component {
     	return result;
     }
 
+
+
 	render() {
 	    return(
-	        <div class="FE_body">
-	        	<div class="column">
+	        <div className="FE_body">
+	        	<div className="column">
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
-	        	<div class="column">
+	        	<div className="column">
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
-	        	<div class="column">
+	        	<div className="column">
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
-	        	<div class="column">
+	        	<div className="column">
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
-	        	<div class="column">
+	        	<div className="column">
 	        		{this.makeExampleCard()}
 	        		{this.makeExampleCard()}
 	        	</div>
