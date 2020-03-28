@@ -1,0 +1,31 @@
+.FE_footer {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 10px;
+}
+
+
+.FE_footer textarea {
+	line-height: 1em;
+	text-align: center;
+	outline: none;
+	border: none;
+	resize: none;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+.FE_footer .feedback p:hover {
+	cursor: pointer;
+}
+.FE_footer .inputDiv {
+	transition: all 0.5s;
+	overflow: hidden;
+}
+
+.hideInput {
+	width: 0;
+}
+
+.showInput {
+	width: 100%;
+}
