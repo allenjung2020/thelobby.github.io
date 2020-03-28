@@ -1,0 +1,18 @@
+.FE_footer {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 10px;
+}
+
+
+.FE_footer textarea {
+	outline: none;
+	border: none;
+	resize: none;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.FE_footer .inputDiv * {
+	display: inline-block;
+}
