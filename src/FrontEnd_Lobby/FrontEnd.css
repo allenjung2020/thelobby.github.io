@@ -100,24 +100,21 @@
 
 .FE_body {
 	background-color: /*#E5E5E5;*/ #f5f5f5;
-	padding: 20px;
-	min-height: 100vh;
-
-}
-
-.FE_body .column {
-	display: inline-grid;
-	width: 20%;
 	padding: 10px;
+	height: 300vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow: hidden;
 }
 
 .FE_Card {
-	width: 100%;
-	margin-bottom: 20px;
+	width: calc(20% - 20px);
+    margin: 10px;
 	/*order-radius: 4px;*/
 	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
 	background-color: #FFFFFF;
-	padding: 5px;
+	padding: 0;
 }
 .FE_Card img {
 	width: 100%;
