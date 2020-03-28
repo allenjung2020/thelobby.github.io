@@ -132,6 +132,9 @@
 }
 
 /*animate the height of paragraph*/
+.FE_Card p:hover {
+	cursor: pointer;
+}
 .FE_Card p {
 	transition: all 0.5s;
 	overflow: hidden;

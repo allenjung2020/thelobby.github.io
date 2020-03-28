@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
 
+import NavBar from "../FE_navigation"; 
+
+
+// the about page
+
+
 class About extends Component {
     
     constructor(props) {
@@ -9,7 +15,8 @@ class About extends Component {
 	render() {
 	    return(
 	        <div className="About">
-	        	<p>This is</p>
+	    		<NavBar/>
+	        	<p>This is the about page</p>
 	        </div>
 	    );
 	}
