@@ -16,10 +16,13 @@ class FE_Card extends Component {
     	super(props);
     }
 
+
+    // to use images without import use require("path")
+    // need to use a transparent div to align thing to the top
 	render() {
 	    return(
 	        <div className="FE_Card">
-	        	{console.log()}
+	        	<div style={{color: "transparent"}}>_</div>
 	        	<img src={ require("" + this.props.img)} alt="company profile image" />
 	        	<h1>{this.props.subject}</h1>
 	        	<p>{this.props.description}</p>
