@@ -43,6 +43,9 @@
 	color: #18A0FB;
 	background-color: #FFFFFF;
 }
+.left a {
+	text-decoration: none;
+}
 .left a:hover {
 	cursor: pointer;
 	text-decoration: underline;
@@ -129,6 +132,9 @@
 }
 
 /*animate the height of paragraph*/
+.FE_Card p:hover {
+	cursor: pointer;
+}
 .FE_Card p {
 	transition: all 0.5s;
 	overflow: hidden;

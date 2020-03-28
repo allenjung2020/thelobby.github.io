@@ -28,10 +28,10 @@ class FrontEnd extends Component {
     	});
     }
 
+    // maybe a bad idea to make FE_navigation change the name 
 	render() {
 	    return(
 	        <div id="FrontEnd">
-	            Front End Yah Bro!
 	            <FE_navigation setName={this.setUserName} name={this.state.UserName}/>
 	            <FE_body/>
 	            <FE_footer/>
