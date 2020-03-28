@@ -99,37 +99,42 @@
 /*********************body************************/
 
 .FE_body {
-	background-color: /*#E5E5E5;*/ #f5f5f5;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-start;
 	padding: 1em;
+	background-color: /*#E5E5E5;*/ #f5f5f5;
 	height: 200vh;
-	columns: 5;
 	overflow: hidden;
 }
 
 .FE_Card {
-    margin-bottom: 1em;
+	position: relative;
+	top: 0;
+	margin: 0.5em;
+	width: calc(20% - 1em);
 	/*order-radius: 4px;*/
 	border: solid 1px rgba(160, 160, 160, 0.3);
 	background-color: #FFFFFF;
 	padding: 0;
-	break-inside: avoid-column;
 }
 
 @media ( max-width: 1200px) {
-	.FE_body {
-		columns: 4;
+	.FE_Card {
+		width: calc(25% - 1em);
 	}
 }
 
 @media ( max-width: 960px) {
-	.FE_body {
-		columns: 3;
+	.FE_Card {
+		width: calc(33% - 1em);
 	}
 }
 
 @media ( max-width: 730px) {
-	.FE_body {
-		columns: 2;
+	.FE_Card {
+		width: calc(50% - 1em);
 	}
 }
 
@@ -139,7 +144,7 @@
 }
 
 .FE_Card h1 {
-	font-size: 1.35em;
+	font-size: 1.3em;
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 900;
 	text-transform: uppercase;
