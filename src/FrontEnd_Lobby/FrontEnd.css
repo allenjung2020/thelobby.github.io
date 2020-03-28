@@ -102,7 +102,7 @@
 .FE_body .column {
 	display: inline-grid;
 	width: 20%;
-	padding: 10px;	
+	padding: 10px;
 }
 
 .FE_Card {
@@ -110,8 +110,17 @@
 	margin-bottom: 20px;
 	border-radius: 4px;
 	background-color: #FFFFFF;
-	padding: 10px;
+	padding: 5px;
+	overflow: hidden;
+	transition: all 0.5s;
 }
+.hide {
+	max-height: calc(0.2*100vw * 1.4);
+}
+.show {
+	max-height: 100%;
+}
+
 
 .FE_Card img {
 	width: 100%;
