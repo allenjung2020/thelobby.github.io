@@ -40,6 +40,9 @@
 	color: #18A0FB;
 	background-color: #FFFFFF;
 }
+.left a {
+	text-decoration: none;
+}
 .left a:hover {
 	cursor: pointer;
 	text-decoration: underline;

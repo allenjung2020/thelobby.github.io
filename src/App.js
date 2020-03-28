@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
@@ -9,7 +9,8 @@ import "./NaviBar.css";
 import Home from "./Home";
 import BackEnd from "./BackEnd_Company/BackEnd";
 import FrontEnd from "./FrontEnd_Lobby/FrontEnd";
-
+//about page
+import About from "./FrontEnd_Lobby/About/About";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/Home" component={Home}/>
           <Route exact path="/" component={FrontEnd}/>
           <Route exact path="/BackEnd_Company/BackEnd" component={BackEnd}/>
+          <Route exact path="/About" component={About}/>
           {/*<NaviBar/>*/}
         </Router>
         {/*<FrontEnd/>*/}
