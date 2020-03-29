@@ -12,6 +12,10 @@
 	/*background-color: rgba(0, 0, 0, 0.15);*/
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 
 
 
@@ -21,29 +25,28 @@
 /*the bar is made of 2 divs each with width 50%*/
 
 .FE_navigation {
-
+	text-align: center;
 }
 
 .FE_navigation_button {
 	font-size: 1.1em;
 	width: 8em;	
 	letter-spacing: 0.5px;
+	line-height: 2em;
 }
 /*buttons on the right side*/
 .right .FE_navigation_button {
-	line-height: 2em;
 	border: 2px solid #18A0FB;
 	border-radius: 6px;
 	margin-right: 0.8em;
 }
-/*links on the right side*/
 
-.left .FE_navigation_button {
+
+/*links on the left side*/
+.left a {
 	margin-left: 0.8em;
 	color: #18A0FB;
 	background-color: #FFFFFF;
-}
-.left a {
 	text-decoration: none;
 }
 .left a:hover {
@@ -59,6 +62,7 @@
 	vertical-align: middle;
 }
 .FE_navigation .left {
+	padding-left: 1em;
 	text-align: left;
 }
 .FE_navigation .left span {
@@ -79,7 +83,6 @@
 	color: #FFFFFF;
 }
 .FE_navigation .right button:nth-child(2):hover {
-	cursor: pointer;
 	background-color: #FFFFFF;
 	color: #18A0FB;
 }
@@ -88,7 +91,6 @@
 	color: #18A0FB;
 }
 .FE_navigation .right button:nth-child(1):hover {
-	cursor: pointer;
 	background-color: #18A0FB;
 	color: #FFFFFF;
 }
@@ -206,3 +208,38 @@
 }
 
 
+/**************************login**************************/
+.FE_login {
+	margin: auto;
+	margin-top: 5px;
+	transition: all .5s;
+	overflow: hidden;
+	max-width: 80%;
+	border-top: 3px solid #a0a0a0;
+	padding: 10px 0;
+	max-height: 160px;
+}
+
+.hideLogin {
+	/*border-top: 4px solid #f5f5f5;*/
+	padding: 0;
+	max-height: 0;
+	max-width: 0%;
+}
+
+.FE_login input {
+	padding: 5px;
+	margin: 0 0 10px 0;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	text-align: center;
+}
+
+.FE_login button {
+	border: none;
+}
+
+.FE_login button:hover {
+
+}
