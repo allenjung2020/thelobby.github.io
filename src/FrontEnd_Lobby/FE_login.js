@@ -1,14 +1,13 @@
 
 import React, {Component} from 'react';
 
-//	
+//uses
+// props.
+//	name, email
+//	setName, setEmail, sendLogin
 
 class FE_login extends Component {
     
-    constructor(props) {
-    	super(props);
-    }
-
     // maybe a bad idea to make FE_navigation change the name 
 	render() {
 	    return(
