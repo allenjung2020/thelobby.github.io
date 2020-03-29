@@ -42,7 +42,7 @@ class FrontEnd extends Component {
         console.log(this.state.userName);
         console.log(this.state.email);
         this.setState({
-            buttonName: "Change account"
+            buttonName: "Switch account"
         });
     }
 
