@@ -75,12 +75,12 @@ class BackEnd extends Component {
     render() {
         return (
             <div id="BackEnd">
-                <textarea
-                    rows={5}
-                    cols={30}
-                    onChange={this.setUserName}
-                    value={this.state.UserName}
-                />
+                {/*<textarea*/}
+                {/*    rows={5}*/}
+                {/*    cols={30}*/}
+                {/*    onChange={this.setUserName}*/}
+                {/*    value={this.state.UserName}*/}
+                {/*/>*/}
                 {/*<BE_navigation setName={this.setUserName} name={this.state.UserName}/>*/}
                 <button onClick={this.Dequeue}>Dequeue</button>
 

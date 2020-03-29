@@ -18,7 +18,7 @@ class BE_navigation extends Component {
                     onChange={this.props.onChange}
                     value={this.props.value}
                 />
-                <button onClick={}></button>
+                {/*<button onClick={}></button>*/}
             </div>
             // <div className="FE_navigation">
             //     <div className="left both">
