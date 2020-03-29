@@ -17,13 +17,16 @@ class FrontEnd extends Component {
     	super(props);
     	this.state = {
     		userName: "",
-    		email: ""
+    		email: "",
+            buttonName: "Sign in"
     	}
     }
 
+
+
     setName = (name) => {
         this.setState({
-            userName: name
+            userName: name,
         });
     }
     setEmail = (email) => {
@@ -36,8 +39,11 @@ class FrontEnd extends Component {
         // perform sanity check on the name and email
         // send them
         // reset the value?
-        console.log(this.state.name);
+        console.log(this.state.userName);
         console.log(this.state.email);
+        this.setState({
+            buttonName: "Change account"
+        });
     }
 
     // maybe a bad idea to make FE_navigation change the name 
@@ -46,7 +52,7 @@ class FrontEnd extends Component {
 	        <div id="FrontEnd">
 	            <FE_navigation setName={this.setName} name={this.state.userName}
                     setEmail={this.setEmail} email={this.state.email}
-                    sendLogins={this.sendLogins}/>
+                    sendLogins={this.sendLogins} buttonName={this.state.buttonName}/>
 	            <FE_body/>
 	            <FE_footer/>
 	        </div>

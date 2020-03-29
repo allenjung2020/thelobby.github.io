@@ -17,7 +17,7 @@ class FE_body extends Component {
 
     makeExampleCard() {
     	let r = this.generateRandomStr(7);
-		let length = Math.random() * 60 + 15;
+		let length = Math.random() * 30 + 15;
 		let description = "";
 		for (let i = 0; i < length; i++) {
 			description += this.generateRandomStr(Math.floor(Math.random()*7 + 3)) + " ";
