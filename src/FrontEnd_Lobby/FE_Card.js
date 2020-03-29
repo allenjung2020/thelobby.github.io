@@ -12,20 +12,13 @@ import React, {Component} from 'react';
 
 class FE_Card extends Component {
     
-    constructor(props) {
-    	super(props);
-    	this.state = {
-    		class: "hide"
-    	};
-    }
+    // constructor(props) {
+    // 	super(props);
+    // 	this.state = {
+    // 		class: "hide"
+    // 	};
+    // }
 
-    clickedToShow = () => {
-    	if (this.state.class === "hide") {
-    		this.setState({class: "show"});
-    	} else {
-    		this.setState({class: "hide"});
-    	}
-    }
 
     // to use images without import use require("path")
     // need to use a transparent div to align thing to the top
@@ -34,7 +27,7 @@ class FE_Card extends Component {
 	        <div className={"FE_Card "}>
 	        	<img src={ require("" + this.props.img)} alt="company profile" />
 	        	<h1>{this.props.subject}</h1>
-	        	<p  onClick={e => this.clickedToShow()} className={this.state.class}>{this.props.description}</p>
+	        	<p>{this.props.description}</p>
 	        	<div className={"container"}>
 					<span>{this.props.number + " in line "}</span>
 					<button>Join Queue</button>

@@ -57,6 +57,13 @@ class FE_body extends Component {
 				{this.makeExampleCard()}
 				{this.makeExampleCard()}
 				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
+				{this.makeExampleCard()}
 	        </div>
 	    );
 	}
