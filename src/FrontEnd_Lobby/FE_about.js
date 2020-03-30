@@ -28,7 +28,7 @@ class FE_about extends Component {
     				<li></li>
     			</ul>
     			<iframe src="https://itconnect.uw.edu/connect/phones/conferencing/zoom-video-conferencing/zoom-canvas/" />
-    			<iframe src="https://zoom.us/join" sandbox="allow-forms"/>
+    			<iframe src="https://zoom.us/join" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" />
 
     		</div>
     	);
