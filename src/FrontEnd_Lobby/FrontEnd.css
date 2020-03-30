@@ -12,6 +12,10 @@
 	/*background-color: rgba(0, 0, 0, 0.15);*/
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 
 
 
@@ -21,29 +25,28 @@
 /*the bar is made of 2 divs each with width 50%*/
 
 .FE_navigation {
-
+	text-align: center;
 }
 
 .FE_navigation_button {
 	font-size: 1.1em;
-	width: 8em;	
 	letter-spacing: 0.5px;
+	line-height: 2em;
 }
 /*buttons on the right side*/
 .right .FE_navigation_button {
-	line-height: 2em;
 	border: 2px solid #18A0FB;
-	border-radius: 6px;
+	border-radius: 6px;	
+	padding: 0 2em;	
 	margin-right: 0.8em;
 }
-/*links on the right side*/
 
-.left .FE_navigation_button {
+
+/*links on the left side*/
+.left a {
 	margin-left: 0.8em;
 	color: #18A0FB;
 	background-color: #FFFFFF;
-}
-.left a {
 	text-decoration: none;
 }
 .left a:hover {
@@ -59,11 +62,12 @@
 	vertical-align: middle;
 }
 .FE_navigation .left {
+	padding-left: 1em;
 	text-align: left;
 }
 .FE_navigation .left span {
 	font-size: 2em;
-	margin-left: 2em;
+	/*margin-left: 2em;*/
 }
 
 .FE_navigation .right {
@@ -79,7 +83,6 @@
 	color: #FFFFFF;
 }
 .FE_navigation .right button:nth-child(2):hover {
-	cursor: pointer;
 	background-color: #FFFFFF;
 	color: #18A0FB;
 }
@@ -88,7 +91,6 @@
 	color: #18A0FB;
 }
 .FE_navigation .right button:nth-child(1):hover {
-	cursor: pointer;
 	background-color: #18A0FB;
 	color: #FFFFFF;
 }
@@ -102,19 +104,21 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	align-content: flex-start;
+	justify-content: flex-start;
 	padding: 1em;
 	background-color: /*#E5E5E5;*/ #f5f5f5;
 	height: 200vh;
-	overflow: hidden;
+	overflow-x: scroll;
 }
 
 .FE_Card {
+	/*flex: 0 1 21%;*/
+	/*align-self: flex-end;*/
+	
 	position: relative;
-	top: 0;
+
 	margin: 0.5em;
 	width: calc(20% - 1em);
-	/*order-radius: 4px;*/
 	border: solid 1px rgba(160, 160, 160, 0.3);
 	background-color: #FFFFFF;
 	padding: 0;
@@ -152,19 +156,34 @@
 }
 
 /*animate the height of paragraph*/
-.FE_Card p:hover {
-	cursor: pointer;
+.FE_Card:hover {
+	cursor: help;
+}
+.FE_Card:hover p {
+	height: 80%;
+	color: white;
+	opacity: 1;
 }
 .FE_Card p {
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0%;
+	overflow-y: scroll;
 	margin: 0;
-	padding: 10px;
+	color: white;
+
 	transition: all 0.5s;
-	overflow: hidden;
 	border-bottom: 1px solid rgba(160, 160, 160, 0.3);
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	color: #808080;
+
+	opacity: 0;
+	padding: 10px;
 }
 
 .FE_Card .container {
@@ -175,13 +194,6 @@
 	text-align: right;
 }
 
-.FE_Card .hide {
-	max-height: 0;
-	padding: 0;
-}
-.show {
-	max-height: 22em;
-}
 
 .FE_Card span {
 	font-family: "Source Sans Pro", sans-serif;
@@ -189,14 +201,14 @@
 
 .FE_Card button {
 	border: 0;
-	border-radius: 0;
+	/*border-radius: 0;*/
 	box-shadow: inset 0 0 0 1px #ddd;
-	padding: 0 1.75em;
+	padding: 0 1.7em;
 	background: #fff;
-	line-height: 3em;
+	line-height: 2.5em;
 	text-transform: uppercase;
 	font-family: "Source Sans Pro", sans-serif;
-	font-size: 12px;
+	font-size: 0.8em;
 	font-weight: 900;
 	color: #555555!important;
 }
@@ -206,3 +218,38 @@
 }
 
 
+/**************************login**************************/
+.FE_login {
+	margin: auto;
+	margin-top: 5px;
+	transition: all .5s;
+	overflow: hidden;
+	max-width: 80%;
+	border-top: 3px solid #a0a0a0;
+	padding: 10px 0;
+	max-height: 160px;
+}
+
+.hideLogin {
+	/*border-top: 4px solid #f5f5f5;*/
+	padding: 0;
+	max-height: 0;
+	max-width: 0%;
+}
+
+.FE_login input {
+	padding: 5px;
+	margin: 0 0 10px 0;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	text-align: center;
+}
+
+.FE_login button {
+	border: none;
+}
+
+.FE_login button:hover {
+
+}

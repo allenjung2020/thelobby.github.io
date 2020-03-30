@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import FE_login from "./FE_login";
+
+// uses: FE_login
 
 // this.props
 //	name: User name
@@ -7,6 +10,18 @@ class FE_navigation extends Component {
     
     constructor(props) {
     	super(props);
+    	this.state = {
+    		loginClass: "hideLogin"
+    	};
+    }
+
+    toogleLogin = () => {
+    	if (this.state.loginClass === "hideLogin") {
+    		this.setState({loginClass: ""});
+    	} else {
+    		this.setState({loginClass: "hideLogin"});
+    	}
+    	// console.log(this.state.loginClass);
     }
 
 	render() {
@@ -21,10 +36,14 @@ class FE_navigation extends Component {
 	            	<a className="FE_navigation_button">Link</a>
 	        	</div>
 	            <div className="right both">
+	        	{/*sign in button*/}
 	            	<button className="FE_navigation_button"
-	            		onClick={e => (console.log("log in"))}>Log in</button>
-	            	<button className="FE_navigation_button">Register</button>
+	            		onClick={this.toogleLogin}>{this.props.buttonName}</button>
 	            </div>
+	            <FE_login class={this.state.loginClass}
+	            	setName={this.props.setName} name={this.props.name}
+                    setEmail={this.props.setEmail} email={this.props.email}
+                    sendLogins={() => {this.props.sendLogins(); this.toogleLogin()}}/>
 	        </div>
 	    );
 	}

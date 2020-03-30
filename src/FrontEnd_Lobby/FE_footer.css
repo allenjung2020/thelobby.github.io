@@ -14,6 +14,9 @@
 	width: 100%;
 	border-bottom: 1px solid black;
 }
+.FE_footer .feedback p {
+	text-decoration: underline;
+}
 .FE_footer .feedback p:hover {
 	cursor: pointer;
 }
