@@ -27,49 +27,58 @@ class BackEnd extends Component {
     };
 
     async Dequeue() {
-            try {
-                // Give specific url for the server to parse
-                let response = await fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Prod/dequeueclient/", {
-                    method: "PUT",
-                    body: JSON.stringify({
-                        key: "CSE142"
-                    })
-                });
-                // let url = "http://localhost:4567/find-path?";
+        fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient",
+            {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({"key": "CSE142"})
+                })
+            .then(response => response.json())
+            .then(data => alert(data));
 
-                // The two buildings to find a path between
-                // url += "start=" + this.state.UserName + "&";
-                // url += "end=" + end;
-
-
-                // Call to server
-                // let response = await fetch(url);
-                if (!response.ok) {
-                    // let error = "The status is wrong! Expected: 200, Was: " + response.status;
-                    // if (response.status === 400) {
-                    //     error += "\nStart or end was not one of the building shortnames.";
-                    // }
-                    // alert(error);
-
-                    return; // Don't keep trying to execute if the response is bad.
-                }
-
-                // Convert what we get back into a JSON
-                let object = await response.json();
-
-                // Store the path we get into the state to pass it to the children
-                // Store the cost of the path to display to the user how far the path
-                // they are to take will be.
-                // Store where the path is between.
-
-                this.setState({
-                    student: object.name,
-                    studentEmail: object.email
-                });
-
-            } catch (e) {
-                alert("There was an error contacting the server.");
-            }
+                // this.setState({ student: response.name,
+                // studentEmail: response.email }));
+            // try {
+            //     // Give specific url for the server to parse
+            //     //                                     https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Prod/
+            //     // https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue
+            //     // Requ
+            //     let requestBody =
+        //     {
+            //         method: "POST",
+            //         headers: { 'Content-Type': 'application/json' },
+            //         body: {"key": "CSE142"}
+            //     };
+            //     // let response = await fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient", requestBody);
+            //
+            //     fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient", requestBody)
+            //         .then(response => response.json())
+            //         .then(data => this.setState({ student: data.name,
+            //                                             studentEmail: data.email }));
+            //
+            //     if (!response.ok) {
+            //         alert(response.status);
+            //
+            //         return; // Don't keep trying to execute if the response is bad.
+            //     }
+            //     alert("Request made. Here");
+            //     // Convert what we get back into a JSON
+            //     let object = await response.json();
+            //
+            //     alert("Changed into a json");
+            //     // Store the path we get into the state to pass it to the children
+            //     // Store the cost of the path to display to the user how far the path
+            //     // they are to take will be.
+            //     // Store where the path is between.
+            //
+            //     this.setState({
+            //         student: object.name,
+            //         studentEmail: object.email
+            //     });
+            //
+            // } catch (e) {
+            //     alert("There was an error contacting the server.");
+            // }
     }
 
     render() {
