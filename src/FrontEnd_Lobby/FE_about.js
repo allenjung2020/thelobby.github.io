@@ -27,6 +27,7 @@ class FE_about extends Component {
     				<li></li>
     				<li></li>
     			</ul>
+    			<iframe src="https://itconnect.uw.edu/connect/phones/conferencing/zoom-video-conferencing/zoom-canvas/" />
     		</div>
     	);
     }
