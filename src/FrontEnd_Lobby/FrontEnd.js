@@ -18,7 +18,8 @@ class FrontEnd extends Component {
     	this.state = {
     		userName: "",
     		email: "",
-            buttonName: "Sign in"
+            buttonName: "Sign in",
+            body: "home"
     	}
     }
 
@@ -88,7 +89,7 @@ class FrontEnd extends Component {
                     home={this.changeToHome}
                     about={this.changeToAbout}
                     />
-	            
+                {this.decideBody()}
 	            <FE_footer/>
 	        </div>
 	    );

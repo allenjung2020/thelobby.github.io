@@ -14,10 +14,27 @@ class FE_about extends Component {
     } 
 
 
+    createHtml() {
+    	return(
+    		<div>
+    			<h1>Our goal</h1>
+    			<ul>
+    				<li></li>
+    				<li></li>
+    			</ul>
+    			<h2>How to use</h2>
+    			<ul>
+    				<li></li>
+    				<li></li>
+    			</ul>
+    		</div>
+    	);
+    }
+
 	render() {
 	    return(
-	        <div className={"FE_about"}>
-	        	
+	        <div className={"FE_about FE_body"}>
+	        	{this.createHtml()}
 	        </div>
 	    );
 	}

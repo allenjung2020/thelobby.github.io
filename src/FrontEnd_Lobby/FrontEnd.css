@@ -49,6 +49,7 @@ button:hover {
 	background-color: #FFFFFF;
 	text-decoration: none;
 	border: none;
+	outline: none;
 }
 .left button:hover {
 	cursor: pointer;
@@ -253,4 +254,15 @@ button:hover {
 
 .FE_login button:hover {
 
+}
+
+
+
+
+/************About************/
+.FE_about {
+	/*overwrite FE_body's style*/
+	overflow-x: hidden;
+	height: auto;
+	text-align: left;
 }
