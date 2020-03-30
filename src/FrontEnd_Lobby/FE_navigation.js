@@ -24,16 +24,21 @@ class FE_navigation extends Component {
     	// console.log(this.state.loginClass);
     }
 
+    displayGreeting() {
+    	if (this.props.name !== "") {
+    		return <span>{"Hi " + this.props.name}</span>;
+    	}
+    	return;
+    }
+
 	render() {
 	    return(
 	        <div className="FE_navigation">
 	        	<div className="left both">
-	        		<span>{"Hello " + this.props.name}</span>
-	            	<a href="/About" className="FE_navigation_button">About</a>
-                	{/*<Link to="/About" className="FE_navigation_button">About</Link>*/}
-
-	            	<a className="FE_navigation_button">Join</a>
-	            	<a className="FE_navigation_button">Link</a>
+	        		{this.displayGreeting()}
+                	<button className="FE_navigation_button" onClick={this.props.home}>Home</button>
+                	<button className="FE_navigation_button" onClick={this.props.about}>About</button>
+                	<button className="FE_navigation_button" onClick={this.props.join}>Join</button>
 	        	</div>
 	            <div className="right both">
 	        	{/*sign in button*/}
@@ -41,9 +46,8 @@ class FE_navigation extends Component {
 	            		onClick={this.toogleLogin}>{this.props.buttonName}</button>
 	            </div>
 	            <FE_login class={this.state.loginClass}
-	            	setName={this.props.setName} name={this.props.name}
-                    setEmail={this.props.setEmail} email={this.props.email}
-                    sendLogins={() => {this.props.sendLogins(); this.toogleLogin()}}/>
+                    sendLogins={this.props.sendLogins}
+                    toogleLogin={this.toogleLogin}/>
 	        </div>
 	    );
 	}

@@ -18,9 +18,7 @@ class FE_login extends Component {
     } 
     // lie and don't pass the name until sendLogin
     submit = () => {
-    	this.props.setName(this.state.userName);
-    	this.props.setEmail(this.state.email);
-    	this.props.sendLogins();
+    	this.props.sendLogins(this.state.userName, this.state.email, this.props.toogleLogin);
     }
 
 	render() {

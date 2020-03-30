@@ -25,34 +25,53 @@ class FrontEnd extends Component {
 
 
     setName = (name) => {
-        this.setState({
-            userName: name,
-        });
+        // this.setState({
+        //     userName: name,
+        // });
     }
     setEmail = (email) => {
-        this.setState({
-            email: email
-        });
+        // this.setState({
+        //     email: email
+        // });
     }
 
-    sendLogins = () => {
+    sendLogins = (name, email, successfunction) => {
         // perform sanity check on the name and email
+        console.log(this.state.email);
+        if (email.includes("\n") || email.split("@").length !== 2) {
+            alert("invalid email: " + email);
+            return;
+        }
+        if (name === "") {
+            alert("invalid name: " + this.state.userName);
+            return;
+        }
         // send them
         // reset the value?
-        console.log(this.state.userName);
-        console.log(this.state.email);
+        // console.log(this.state.userName);
+        // console.log(this.state.email);
         this.setState({
-            buttonName: "Switch account"
+            buttonName: "Switch account",
+            userName: name,
+            email: email
         });
+        successfunction();
+    }
+
+    changeToHome = () => {
+
     }
 
     // maybe a bad idea to make FE_navigation change the name 
 	render() {
 	    return(
 	        <div id="FrontEnd">
-	            <FE_navigation setName={this.setName} name={this.state.userName}
-                    setEmail={this.setEmail} email={this.state.email}
-                    sendLogins={this.sendLogins} buttonName={this.state.buttonName}/>
+	            <FE_navigation 
+                    name={this.state.userName}
+                    email={this.state.email}
+                    sendLogins={this.sendLogins} buttonName={this.state.buttonName}
+                    home={this.changeToHome}
+                    />
 	            <FE_body/>
 	            <FE_footer/>
 	        </div>
