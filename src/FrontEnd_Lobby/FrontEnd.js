@@ -4,7 +4,7 @@ import "./FrontEnd.css";
 import FE_navigation from './FE_navigation';
 import FE_body from './FE_body';
 import FE_footer from './FE_footer';
-
+import FE_about from './FE_about';
 // manages the layout of the frontend view
 // Uses:
 //	FE_navigation
@@ -59,7 +59,22 @@ class FrontEnd extends Component {
     }
 
     changeToHome = () => {
+        this.setState({
+            body: "home"
+        });
+    }
+    changeToAbout = () => {
+        this.setState({
+            body: "about"
+        });
+    }
 
+    decideBody() {
+        if (this.state.body === "home") {
+            return <FE_body/>;
+        } else if (this.state.body === "about") {
+            return <FE_about/>;
+        }
     }
 
     // maybe a bad idea to make FE_navigation change the name 
@@ -71,8 +86,9 @@ class FrontEnd extends Component {
                     email={this.state.email}
                     sendLogins={this.sendLogins} buttonName={this.state.buttonName}
                     home={this.changeToHome}
+                    about={this.changeToAbout}
                     />
-	            <FE_body/>
+	            
 	            <FE_footer/>
 	        </div>
 	    );
