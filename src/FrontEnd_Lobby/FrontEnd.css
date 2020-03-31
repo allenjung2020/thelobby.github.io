@@ -272,3 +272,9 @@ button:hover {
 	width: 33%;
 	height: 500px;
 }
+
+.FE_about_info {
+	padding: 0 30px 10px 0;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
+}
