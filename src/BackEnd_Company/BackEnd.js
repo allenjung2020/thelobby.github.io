@@ -26,37 +26,66 @@ class BackEnd extends Component {
         });
     };
 
-    async Dequeue() {
-        fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient",
+    Dequeue = async() => {
+        // let dat;
+        // let name = "";
+        // let email = "";
+        await fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient",
             {
                     method: "POST",
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({"key": "CSE142"})
                 })
             .then(response => response.json())
-            .then(data => alert(data));
+            // .then(data => alert(data));
 
-                // this.setState({ student: response.name,
-                // studentEmail: response.email }));
+            .then(data => this.setState({
+                    student: data.name,
+                    studentEmail: data.email
+                }));
+
+            alert(this.state.student);
+            alert(this.state.studentEmail);
+            // .then(data => email = data.email)
+            // .then(data => console.log(data));
+
+            // await this.setState({
+            //     student : name,
+                // studentEmail : email
+            // });
+            // .then(data => this.setState({
+            //     student: data.name,
+            //     studentEmail: data.email
+            // }));
+
+            // alert(dat);
+
+            // alert(dat);
+
+            // .then(data => this.setState({ student: data.name,
+            //     studentEmail: data.email }));
+
+
             // try {
             //     // Give specific url for the server to parse
             //     //                                     https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Prod/
             //     // https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue
             //     // Requ
-            //     let requestBody =
-        //     {
-            //         method: "POST",
-            //         headers: { 'Content-Type': 'application/json' },
-            //         body: {"key": "CSE142"}
+            //     let requestBody = {
+            //         method: "OPTIONS",
+            //         // mode : 'no-cors',
+            //         headers: {'Content-Type': 'application/json'},
+            //         body: JSON.stringify({"key": "CSE142"})
             //     };
-            //     // let response = await fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient", requestBody);
+            //     let response = await fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient", requestBody);
             //
-            //     fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient", requestBody)
-            //         .then(response => response.json())
-            //         .then(data => this.setState({ student: data.name,
-            //                                             studentEmail: data.email }));
+            //     // fetch("https://8ckk6ja3rk.execute-api.us-west-2.amazonaws.com/Dequeue/dequeueclient", requestBody)
+            //     //     .then(response => response.json())
+            //     //     .then(data => this.setState({ student: data.name,
+            //     //                                         studentEmail: data.email }));
             //
             //     if (!response.ok) {
+            //         console.log(response);
             //         alert(response.status);
             //
             //         return; // Don't keep trying to execute if the response is bad.
@@ -78,6 +107,7 @@ class BackEnd extends Component {
             //
             // } catch (e) {
             //     alert("There was an error contacting the server.");
+            //     console.log(e);
             // }
     }
 
