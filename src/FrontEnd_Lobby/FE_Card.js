@@ -25,6 +25,7 @@ class FE_Card extends Component {
 	render() {
 	    return(
 	        <div className={"FE_Card "}>
+	        	<div className="zero_height">_</div>
 	        	<img src={ require("" + this.props.img)} alt="company profile" />
 	        	<h1>{this.props.subject}</h1>
 	        	<p>{this.props.description}</p>

@@ -13,6 +13,9 @@ class FE_body extends Component {
     
     constructor(props) {
     	super(props);
+    	this.state = {
+    		cards: []
+    	};
     }
 
     makeExampleCard() {
@@ -36,34 +39,45 @@ class FE_body extends Component {
     }
 
 
+    componentDidMount() {
+    	// get booths from server
+    	let newCards = [];
+    	for (let i = 0; i < 40; i++) {
+    		newCards.push(this.makeExampleCard());
+    	}
+    	this.setState({
+    		cards: newCards
+    	});
+    }
+
+    generateColumns() {
+    	if (this.state.cards.length === 0) {
+    		return;
+    	}
+    	let result = [];
+    	for (let i = 0; i < 5; i++) {
+    		result.push([]);
+    	} // 5 columns
+
+    	// calculate how many cards in each column
+    	let count = this.state.cards.length / 5;
+    	for (let i = 0; i < this.state.cards.length; i++) {
+    		result[Math.floor(i / count)].push(this.state.cards[i]);
+    	}
+
+    	let html = [];
+    	for (let i = 0; i < 5; i++) {
+    		html.push(<div className="FE_body_column">{result[i]}</div>);
+    	}
+
+    	return html;
+    }
+
 
 	render() {
 	    return(
 	        <div className="FE_body">
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
-				{this.makeExampleCard()}
+				{this.generateColumns()}
 	        </div>
 	    );
 	}
