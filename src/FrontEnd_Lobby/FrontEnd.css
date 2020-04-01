@@ -43,13 +43,15 @@ button:hover {
 
 
 /*links on the left side*/
-.left a {
+.left button {
 	margin-left: 0.8em;
 	color: #18A0FB;
 	background-color: #FFFFFF;
 	text-decoration: none;
+	border: none;
+	outline: none;
 }
-.left a:hover {
+.left button:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
@@ -252,4 +254,27 @@ button:hover {
 
 .FE_login button:hover {
 
+}
+
+
+
+
+/************About************/
+.FE_about {
+	/*overwrite FE_body's style*/
+	overflow-x: hidden;
+	height: auto;
+	text-align: left;
+}
+
+.FE_about iframe {
+	border: none;
+	width: 33%;
+	height: 500px;
+}
+
+.FE_about_info {
+	padding: 0 30px 10px 0;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
 }
