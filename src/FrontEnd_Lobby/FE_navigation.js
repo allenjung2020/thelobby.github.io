@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import FE_login from "./FE_login";
 
+import Logo from "./Logo.png";
+
 // uses: FE_login
 
 // this.props
@@ -26,7 +28,7 @@ class FE_navigation extends Component {
 
     displayGreeting() {
     	if (this.props.name !== "") {
-    		return <span>{"Hi " + this.props.name}</span>;
+    		return <span>{"Hi " + this.props.name.split(" ")[0]}</span>;
     	}
     	return;
     }
@@ -34,17 +36,20 @@ class FE_navigation extends Component {
 	render() {
 	    return(
 	        <div className="FE_navigation">
-	        	<div className="left both">
-	        		{this.displayGreeting()}
-                	<button className="FE_navigation_button" onClick={this.props.home}>Home</button>
-                	<button className="FE_navigation_button" onClick={this.props.about}>About</button>
-                	<button className="FE_navigation_button" onClick={this.props.join}>Join</button>
-	        	</div>
-	            <div className="right both">
-	        	{/*sign in button*/}
-	            	<button className="FE_navigation_button"
-	            		onClick={this.toogleLogin}>{this.props.buttonName}</button>
-	            </div>
+                <div className="bar">
+    	        	<div className="left both">
+    	        		{this.displayGreeting()}
+                    	<button className="FE_navigation_button" onClick={this.props.home}>Home</button>
+                    	<button className="FE_navigation_button" onClick={this.props.about}>About</button>
+                    	<button className="FE_navigation_button" onClick={this.props.join}>Join</button>
+    	        	</div>
+                    <img src={Logo}/>
+    	            <div className="right both">
+    	        	{/*sign in button*/}
+    	            	<button className="FE_navigation_button"
+    	            		onClick={this.toogleLogin}>{this.props.buttonName}</button>
+    	            </div>
+                </div>
 	            <FE_login class={this.state.loginClass}
                     sendLogins={this.props.sendLogins}
                     toogleLogin={this.toogleLogin}/>
