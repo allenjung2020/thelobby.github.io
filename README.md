@@ -1,3 +1,5 @@
+#[Link to a recent build here](https://allenjung2020.github.io/thelobby.github.io/build/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
