@@ -15,7 +15,7 @@ function App() {
     <div className="App">
         {/*<Route exact path="/" />*/}
         <Router>
-            <NaviBar/>
+          <NaviBar/>
           {/*<nav>*/}
           {/*  /!*<Link to={}*!/*/}
           {/*</nav>*/}
@@ -23,7 +23,6 @@ function App() {
           <Route exact path="/BackEnd_Company/BackEnd" component={BackEnd}/>
           {/*<NaviBar/>*/}
         </Router>
-        {/*<FrontEnd/>*/}
     </div>
   );
 }
