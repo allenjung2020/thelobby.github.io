@@ -12,19 +12,10 @@ class BE_nextStudent extends Component {
         }
     }
 
-    updateStudent = () => {
-        if (!this.props.student.equals("")) {
-            this.setState({
-                display: "Student: " + this.props.student + "\nEmail: " +this.props.email
-            })
-        }
-    }
-
     render() {
         return(
             <div className={"student"}>
                 <div>
-                    {/*{this.state.display}*/}
                     Student:   {this.props.student}
                 </div>
                 <div>
