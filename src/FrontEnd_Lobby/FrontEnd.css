@@ -24,10 +24,6 @@ button:hover {
 /*********************navigation bar************************/
 /*the bar is made of 2 divs each with width 50%*/
 
-.FE_navigation {
-	text-align: center;
-}
-
 .FE_navigation_button {
 	font-size: 1.1em;
 	letter-spacing: 0.5px;
@@ -38,13 +34,13 @@ button:hover {
 	border: 2px solid #18A0FB;
 	border-radius: 6px;	
 	padding: 0 2em;	
-	margin-right: 0.8em;
+	/*margin-right: 0.8em;*/
 }
 
 
 /*links on the left side*/
 .left button {
-	margin-left: 0.8em;
+	margin-right: 0.8em;
 	color: #18A0FB;
 	background-color: #FFFFFF;
 	text-decoration: none;
@@ -52,24 +48,26 @@ button:hover {
 	outline: none;
 }
 .left button:hover {
-	cursor: pointer;
 	text-decoration: underline;
 }
 
 
 /*the bar is made of 2 divs each with width 50%*/
 .FE_navigation .both {
-	width: 50%;
 	display: inline-block;
-	vertical-align: middle;
+	width: 40vw;
 }
 .FE_navigation .left {
-	padding-left: 1em;
 	text-align: left;
 }
 .FE_navigation .left span {
 	font-size: 2em;
-	/*margin-left: 2em;*/
+	padding-right: 10px;
+}
+.FE_navigation img {
+	display: inline;
+	width: 10vw;
+	transform: translateY(5px);
 }
 
 .FE_navigation .right {
