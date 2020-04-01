@@ -22,9 +22,16 @@ class BE_nextStudent extends Component {
 
     render() {
         return(
-            <div>
-                {this.state.display}
+            <div className={"student"}>
+                <div>
+                    {/*{this.state.display}*/}
+                    Student:   {this.props.student}
+                </div>
+                <div>
+                    Email: {this.props.email}
+                </div>
             </div>
+
         );
     }
 

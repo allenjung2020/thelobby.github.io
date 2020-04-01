@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import "./BackEnd.css";
+
 import BE_navigation from "./BE_navigation";
 import FE_navigation from "../FrontEnd_Lobby/FE_navigation";
 import FE_body from "../FrontEnd_Lobby/FE_body";
@@ -12,18 +14,42 @@ class BackEnd extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            UserName: "",
-            Email: "email@email.com",
+            userName: "",
+            email: "",
+            buttonName: "Sign in",
             student: "",
             studentEmail: ""
         }
     }
 
-    setUserName = (name) => {
-        this.setState({
-            UserName: name
+    // setUserName = (name) => {
+    //     this.setState({
+    //         UserName: name
+    //
+    //     });
+    // };
 
+    sendLogins = (name, email, successfunction) => {
+        // perform sanity check on the name and email
+        console.log(this.state.email);
+        if (email.includes("\n") || email.split("@").length !== 2) {
+            alert("invalid email: " + email);
+            return;
+        }
+        if (name === "") {
+            alert("invalid name: " + this.state.userName);
+            return;
+        }
+        // send them
+        // reset the value?
+        // console.log(this.state.userName);
+        // console.log(this.state.email);
+        this.setState({
+            buttonName: "Switch account",
+            userName: name,
+            email: email
         });
+        successfunction();
     };
 
     Dequeue = async() => {
@@ -109,24 +135,20 @@ class BackEnd extends Component {
             //     alert("There was an error contacting the server.");
             //     console.log(e);
             // }
-    }
+    };
 
     render() {
         return (
-            <div id="BackEnd">
-                {/*<textarea*/}
-                {/*    rows={5}*/}
-                {/*    cols={30}*/}
-                {/*    onChange={this.setUserName}*/}
-                {/*    value={this.state.UserName}*/}
-                {/*/>*/}
-                {/*<BE_navigation setName={this.setUserName} name={this.state.UserName}/>*/}
-                <button onClick={this.Dequeue}>Dequeue</button>
+            <body id="BackEnd">
+                <BE_navigation
+                    name={this.state.userName}
+                    email={this.state.email}
+                    sendLogins={this.sendLogins} buttonName={this.state.buttonName}
+                />
+                <button className={"Dequeue"} onClick={this.Dequeue}>Next Student</button>
 
                 <BE_nextStudent student={this.state.student} email={this.state.studentEmail}/>
-                {/*<FE_body/>*/}
-                {/*<FE_footer/>*/}
-            </div>
+            </body>
         );
     }
 }
