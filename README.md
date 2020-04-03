@@ -1,4 +1,4 @@
-# [Link to a recent build here](https://allenjung2020.github.io/thelobby.github.io/build/)
+# [Link to a recent build here](https://allenjung2020.github.io/thelobby.github.io/build/index.html)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
