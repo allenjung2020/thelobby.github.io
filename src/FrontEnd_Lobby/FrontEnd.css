@@ -1,5 +1,7 @@
 /*all css styles for frontend view in one file?*/
-
+html {
+	overflow-y: scroll;
+}
 
 #FrontEnd * {
 	box-sizing: border-box;

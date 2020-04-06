@@ -40,7 +40,8 @@ class FE_navigation extends Component {
     	        	<div className="left both">
     	        		{this.displayGreeting()}
                     	<button className="FE_navigation_button" onClick={this.props.home}>Home</button>
-                    	<button className="FE_navigation_button" onClick={this.props.about}>About</button>
+                        <button className="FE_navigation_button" onClick={this.props.about}>About</button>
+                    	<button className="FE_navigation_button" onClick={this.props.tutorLobby}>TutorLobby</button>
                     	<button className="FE_navigation_button" onClick={this.props.join}>Join</button>
     	        	</div>
                     <img src={Logo}/>

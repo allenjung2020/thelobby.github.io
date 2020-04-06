@@ -53,8 +53,8 @@ class TutorLobby extends Component {
     constructor(props) {
     	super(props);
     	this.state = {
-    		channel = "default",
-    		lobby = true
+    		channel: "default",
+    		lobby: true
     	};
     }
 

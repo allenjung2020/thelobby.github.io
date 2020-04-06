@@ -5,6 +5,11 @@ import FE_navigation from './FE_navigation';
 import FE_body from './FE_body';
 import FE_footer from './FE_footer';
 import FE_about from './FE_about';
+/**
+ * Tutor aspect
+ */
+import TutorLobby from './ChatNTutor/TutorLobby';
+
 // manages the layout of the frontend view
 // Uses:
 //	FE_navigation
@@ -24,17 +29,6 @@ class FrontEnd extends Component {
     }
 
 
-
-    setName = (name) => {
-        // this.setState({
-        //     userName: name,
-        // });
-    }
-    setEmail = (email) => {
-        // this.setState({
-        //     email: email
-        // });
-    }
 
     sendLogins = (name, email, successfunction) => {
         // perform sanity check on the name and email
@@ -59,22 +53,15 @@ class FrontEnd extends Component {
         successfunction();
     }
 
-    changeToHome = () => {
-        this.setState({
-            body: "home"
-        });
-    }
-    changeToAbout = () => {
-        this.setState({
-            body: "about"
-        });
-    }
-
+    // the subpages
+    
     decideBody() {
         if (this.state.body === "home") {
             return <FE_body/>;
         } else if (this.state.body === "about") {
             return <FE_about/>;
+        } else if (this.state.body === "TutorLobby") {
+            return <TutorLobby />
         }
     }
 
@@ -85,9 +72,13 @@ class FrontEnd extends Component {
 	            <FE_navigation 
                     name={this.state.userName}
                     email={this.state.email}
-                    sendLogins={this.sendLogins} buttonName={this.state.buttonName}
-                    home={this.changeToHome}
-                    about={this.changeToAbout}
+                    sendLogins={this.sendLogins} 
+                    buttonName={this.state.buttonName}
+                    
+                    home={e => this.setState({body: "home"})}
+                    about={e => this.setState({body: "about"})}
+                    
+                    tutorLobby={e => this.setState({body: "TutorLobby"})}  //add tutor body}
                     />
                 {this.decideBody()}
 	            <FE_footer/>
