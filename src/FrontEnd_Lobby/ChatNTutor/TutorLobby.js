@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import "./TutorLobby.css";
 
-
-
-
+import TutorChat from './TutorChat';
+import TutorLobbyForeground from './TutorLobbyForeground';
 /**
  * The lobby area for tutoring that stores
  * all the current subjects (cards), active
@@ -25,7 +24,6 @@ import "./TutorLobby.css";
  * hardcode in TA data
  * so they are TA after "sign in"
  */
-
 
 /**
  * Cards
@@ -58,14 +56,27 @@ class TutorLobby extends Component {
     	};
     }
 
+    getChatClass() {
+    	if (this.state.lobby) {
+    		return "blur";
+    	}
+    }
 
 	render() {
 	    return(
 	        <div id={"TutorLobby"}>
-	        	
+	        	<TutorChat 
+	        		channel={this.state.channel}
+	        		class={this.getChatClass()}
+	        	/>
+
+	        	<TutorLobbyForeground />
 	        </div>
 	    );
 	}
 }
 
 export default TutorLobby;
+
+
+
