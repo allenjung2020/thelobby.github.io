@@ -21,7 +21,7 @@ class TutorChat extends Component {
 
 	render() {
 	    return(
-	        <div id={"TutorChat"} class={this.props.class}>
+	        <div id={"TutorChat"} className={this.props.class}>
 	        	<p>This is some chat</p>
 	        	<p>This is some chat</p>
 	        	<p>This is some chat</p>

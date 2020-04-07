@@ -34,6 +34,12 @@
 /**************Selection*************/
 
 #TutorLobbyForeground {
-	background-color: red;
+	/*background-color: red;*/
 	z-index: 1;
+}
+
+
+/***************SubjectCard***********/
+.SubjectCard {
+	
 }

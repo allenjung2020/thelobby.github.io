@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import SubjectCard from './SubjectCard';
 
 /**
  * Foreground chatroom selections
@@ -23,49 +24,62 @@ class TutorLobbyForeground  extends Component {
 
     componentDidMount() {
     	// get the avilable subjects
-    	let openSubjects = this.getSubjectsAndInfo();
+    	this.getSubjectsAndInfo();
 
-    	// what is one subject
-    	
+
+            // console.log(openSubjects);
+    	// for (let el of openSubjects) {
+        // }
     	
     }
 
 
     async getSubjectsAndInfo() {
-    	let promise = fetch("what is the link?");
+    	let promise = await fetch("http://localhost:4567/test");
 
     	if (!promise.ok) {
     		console.log("Error in getting subjects:");
     		console.log(promise);
-    		return [];
+    		return;
     	}
 
-    	let result = [];
     	let response = await promise.json();
-    	console.log(promise.text());
-    	return result;
+    	// console.log(response);
+        this.setState({
+            subjects: response
+        });
+    	return;
     }
 
 
     generateColumn(num) {
-    	// at most 4 columns
-    	return ""
+        // at most 4 columns
+    	let html = [];
+        for (let i = num; i < this.state.subjects.length; i += 4) {
+            // console.log(this.state.subjects[i]);
+            html.push(<SubjectCard key={i} name={this.state.subjects[i].name}
+                tutorCount={this.state.subjects[i].tutorCount}
+                tuteeCount={this.state.subjects[i].tuteeCount}
+                professorCount={this.state.subjects[i].professorCount} />
+            );
+        }
+        return html;
     }
 
 
 	render() {
 	    return(
 	        <div id={"TutorLobbyForeground"}>
-	        	<div class="FE_body_column">
+	        	<div className="FE_body_column">
 	        		{this.generateColumn(0)}
 	        	</div>
-	        	<div class="FE_body_column">
+	        	<div className="FE_body_column">
 	        		{this.generateColumn(1)}
 	        	</div>
-	        	<div class="FE_body_column">
+	        	<div className="FE_body_column">
 	        		{this.generateColumn(2)}
 	        	</div>
-	        	<div class="FE_body_column">
+	        	<div className="FE_body_column">
 	        		{this.generateColumn(3)}
 	        	</div>
 	        </div>

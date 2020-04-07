@@ -9,10 +9,6 @@ import React, {Component} from 'react';
 class FE_about extends Component {
     
     // lie and don't pass the name until sendLogin
-    constructor(props) {
-    	super(props);
-    } 
-
 
     createHtml() {
     	return(
@@ -35,8 +31,8 @@ class FE_about extends Component {
 					</p>
 				</div>
     			
-    			<iframe src="https://itconnect.uw.edu/connect/phones/conferencing/zoom-video-conferencing/zoom-canvas/" />
-    			<iframe src="https://zoom.us/join" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" />
+    			<iframe title="UW Zoom Instruction" src="https://itconnect.uw.edu/connect/phones/conferencing/zoom-video-conferencing/zoom-canvas/" />
+    			<iframe title="Zoom Page" src="https://zoom.us/join" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" />
 
     		</div>
     	);

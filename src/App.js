@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          {console.log("Only front end is built, backend features not accessable")}
+          {/*{console.log("Only front end is built, backend features not accessable")}*/}
           {this.createHtml()}
           <button style={{position:"fixed", top:0, left:0}} onClick={this.switchPage}>Switch</button>
       </div>
