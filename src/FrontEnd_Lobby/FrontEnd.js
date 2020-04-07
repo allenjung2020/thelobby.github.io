@@ -24,7 +24,7 @@ class FrontEnd extends Component {
     		userName: "",
     		email: "",
             buttonName: "Sign in",
-            body: "TutorLobby" //default page is home
+            body: "home" //default page is home
     	}
     }
 
