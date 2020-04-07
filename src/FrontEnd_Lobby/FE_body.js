@@ -27,7 +27,9 @@ class FE_body extends Component {
 		}
 
     	return <Card subject={r} description={description} 
-    	number={Math.floor(Math.random()*10)} img={"./imgSample/company" + Math.floor(Math.random()*10+1) + ".png"}/>
+    	   number={Math.floor(Math.random()*10)} 
+           img={"./imgSample/company" + Math.floor(Math.random()*10+1) + ".png"}
+        />
     }
 
     generateRandomStr(length) {

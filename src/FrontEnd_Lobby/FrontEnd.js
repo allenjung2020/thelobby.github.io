@@ -32,7 +32,7 @@ class FrontEnd extends Component {
 
     sendLogins = (name, email, successfunction) => {
         // perform sanity check on the name and email
-        console.log(this.state.email);
+        // console.log(this.state.email);
         if (email.includes("\n") || email.split("@").length !== 2) {
             alert("invalid email: " + email);
             return;
@@ -61,7 +61,8 @@ class FrontEnd extends Component {
         } else if (this.state.body === "about") {
             return <FE_about/>;
         } else if (this.state.body === "TutorLobby") {
-            return <TutorLobby />
+            return <TutorLobby username={this.state.userName} 
+                useremail={this.state.email}/>
         }
     }
 

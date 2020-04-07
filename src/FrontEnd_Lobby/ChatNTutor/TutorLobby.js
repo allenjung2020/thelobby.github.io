@@ -44,7 +44,8 @@ import TutorLobbyForeground from './TutorLobbyForeground';
 
 /*
 	From props:
-		username
+		username,
+		useremail
  */
 class TutorLobby extends Component {
     
@@ -62,6 +63,16 @@ class TutorLobby extends Component {
     	}
     }
 
+    enterChatRoom = (roomName) => {
+        // check if signed in first
+        if (this.props.username === "" || this.props.useremail === "") {
+            console.log("Need to sign in!");
+            return;
+        }
+        console.log(roomName);
+        // valid join room
+    }
+
 	render() {
 	    return(
 	        <div id={"TutorLobby"}>
@@ -70,7 +81,10 @@ class TutorLobby extends Component {
 	        		class={this.getChatClass()}
 	        	/>
 
-	        	<TutorLobbyForeground />
+	        	<TutorLobbyForeground 
+	        		username={this.props.username}
+	        		useremail={this.props.useremail}
+	        		enterChatRoom={this.enterChatRoom}/>
 	        </div>
 	    );
 	}
